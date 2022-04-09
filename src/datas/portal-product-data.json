@@ -1,0 +1,46 @@
+{
+  "message": "success",
+  "statusCode": 10000,
+  "data|9": [
+    {
+      "title": "手机",
+      "ad": {
+        "firstAd": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ac5cafc68c10ce4471869d378f594b52.png?thumb=1&w=234&h=614&f=webp&q=90"
+      },
+      "productCategoryList": [
+        {
+          "categoryName": "手机",
+          "productList|8": [
+            {
+              "picture": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d764150a470174741d8b0b04515f7a78.jpg?thumb=1&w=200&h=200&f=webp&q=90",
+              "title": "Redmi 10A",
+              "description": "大电量、大音量、大屏幕",
+              "price": "649元起",
+              "discountPrice": "699元"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "智能穿戴",
+      "ad": {
+        "firstAd": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9895c56a7b792fb9053e3085fc261072.jpg"
+      },
+      "productCategoryList": [
+        {
+          "categoryName": "热门",
+          "productList|7": [
+            {
+              "picture": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b8259e8fb355acf168c66f75d375c6af.jpg?thumb=1&w=200&h=200&f=webp&q=90",
+              "title": "Xiaomi Watch S1",
+              "description": "腕事具备",
+              "price": "1049元起",
+              "discountPrice": "1099元"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
