@@ -4,11 +4,12 @@
       <ProductBanner class="product-banner" />
       <ProductShow1 class="product-show" />
 
-      <ProductShow2
+
+      <ProductBlock
         class="product-show"
-        v-for="(v, k) in products"
+        v-for="(v, k) in blocks"
         :key="k"
-        :productShowEntity="v"
+        :blockEntity="v"
       />
     </div>
   </div>
@@ -16,33 +17,35 @@
 
 <script>
 import ProductListEntity from '@/entity/portal/product-list-entity';
+import ProductAdvertisementEntity from '@/entity/portal/product-advertisement-entity';
+import VideoListEntity from '@/entity/portal/video-list-entity';
+
 import PortalBiz from '@/biz/portal-biz';
 import ProductBanner from './components/product-banner.vue';
 import ProductShow1 from './components/product-show-1.vue';
 import ProductShow2 from './components/product-show-2.vue';
+import ProductBlock from './components/product-block.vue';
 export default {
   name: 'ProductIndex',
   data() {
     return {
       /**
-       * @type {ProductListEntity[]}
+       * @type {Array.<ProductListEntity|ProductAdvertisementEntity|VideoListEntity>}
        */
       blocks: [],
-      productBlocks:[],
-      advertisementBlocks:[],
-      productBlocks:[],
     };
   },
   components: {
     ProductBanner,
     ProductShow1,
     ProductShow2,
+    ProductBlock,
   },
   methods: {
     async queryPortalBlocks() {
       let biz = new PortalBiz();
-      this.products = await biz.queryPortalBlocks();
-      console.log(this.products);
+      this.blocks = await biz.queryPortalBlocks();
+      console.log(this.blocks);
     },
   },
   mounted() {

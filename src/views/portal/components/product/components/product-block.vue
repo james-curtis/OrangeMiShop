@@ -1,10 +1,4 @@
 <template>
-  <ProductAD v-if="isAD()" :productAdvertisementEntity="blockEntity" />
-  <ProductBlockProductShow
-    v-else-if="isList()"
-    :productListEntity="blockEntity"
-  />
-  <ProductBlockVideo v-else-if="isVideo()" :VideoListEntity="blockEntity" />
 </template>
 
 <script>
@@ -31,6 +25,12 @@ export default {
       type: [ProductListEntity, ProductAdvertisementEntity, VideoListEntity],
       required: true,
     },
+  },
+  created(){
+    console.log(this.blockEntity);
+  },
+  mounted(){
+    console.log(this.isList);
   },
   computed: {
     isList: () => this.blockEntity instanceof ProductListEntity,
